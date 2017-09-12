@@ -1,11 +1,12 @@
-<article>
-    <section class="header">
-        Posted on $date$
-        $if(author)$
-            by $author$
-        $endif$
-    </section>
-    <section>
-        $body$
-    </section>
-</article>
+<div class='markdown'>
+  <div class='container'>
+    <h1 class='grey-95'>$title$</h1>
+    Posted on $date$
+    $if(author)$
+    by $author$
+    $endif$
+    <div class='padding-t-5'>
+      $body$
+    </div>
+  </div>
+</div>

@@ -1,16 +1,27 @@
 ---
 title: Home
 ---
+<div>
+  <div class='md-center sm-padding-t-10 grey-95 padding-b-5 sm-padding-b-20'>
+    <h1>The Life and Times of <br />Functional Programmer</h1>
+    <p>
+      Reads about Web Development, Functional Programming <br/> and Web Based GIS
+    </p>
+  </div>
+  <div class='row sm-row padding-t-2'>
+    <div class='column sm-column-50 sm-padding-r-6 padding-t-5 sm-padding-t-0 md-column-40'>
+      <p class='medium grey-95'>
+        Written with 💖
+      </p>
+      $partial("templates/post-list.html")$
+    </div>
 
-<h2>Welcome</h2>
-
-<img src="/images/haskell-logo.png" style="float: right; margin: 10px;" />
-
-<p>Welcome to my blog!</p>
-
-<p>I've reproduced a list of recent posts here for your reading pleasure:</p>
-
-<h2>Posts</h2>
-$partial("templates/post-list.html")$
-
-<p>…or you can find more in the <a href="/archive.html">archives</a>.</p>
+    <div class='column padding-t-6 padding-b-6 md-padding-t-0 md-right'>
+      <p class='margin-b-1 medium external-link'>
+        <a target='_blank' href='https://medium.com/@lunasunkaiser'>
+          Medium
+        </a>
+      </p>
+    </div>
+  </div>
+</div>
