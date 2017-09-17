@@ -2,7 +2,8 @@
 {-# LANGUAGE OverloadedStrings #-}
 import           Data.Monoid (mappend)
 import           Hakyll
-
+import           DateContext
+import           ConvertSass
 
 --------------------------------------------------------------------------------
 main :: IO ()
@@ -62,15 +63,3 @@ main = hakyll $ do
                 >>= relativizeUrls
 
     match "templates/*" $ compile templateBodyCompiler
-
-
---------------------------------------------------------------------------------
-postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
-
---------------------------------------------------------------------------------
-sassify :: Item String -> Compiler (Item String)
-sassify item = withItemBody (unixFilter "sass" ["-s", "--scss", "--load-path", "css"]) item
-               >>= return . fmap compressCss
